@@ -1,15 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const Greeting = () => {
+const BookList = () => {
   return (
     <>
-      <React.StrictMode>
-        <h2>First Reeact Component</h2>
+      <section>
         <Book />
-        <Person />
-        <Message />
-      </React.StrictMode>
+        <Book />
+        <Book />
+      </section>
     </>
   );
 };
@@ -17,20 +16,32 @@ const Greeting = () => {
 const Book = () => {
   return (
     <>
-      <input type="text" name="" id="" />
-      <hr />
-      <h3>hello</h3>
+      <article className="book">
+        <Image />
+        <Title />
+        <Author />
+      </article>
     </>
   );
 };
 
-const Person = () => {
-  return <div>hi im a person</div>;
+const Image = () => {
+  return (
+    <>
+      <img
+        src="https://images-na.ssl-images-amazon.com/images/I/81s0B6NYXML._AC_UL600_SR600,400_.jpg"
+        alt="Lily hasn’t always had it easy, but that’s never stopped her from working hard for the life she wants."
+      />
+    </>
+  );
 };
-const Message = () => {
-  return <div>hi im a Message from another space</div>;
+const Title = () => {
+  return <h2>It Ends with Us: A Novel</h2>;
+};
+const Author = () => {
+  return <h3>- Colleen Hoover -</h3>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<Greeting />);
+root.render(<BookList />);
