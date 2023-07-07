@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+import "./index.css";
+
 const BookList = () => {
   return (
     <>
-      <section>
+      <section className="booklist">
         <Book />
         <Book />
         <Book />
@@ -29,7 +31,7 @@ const Image = () => {
   return (
     <>
       <img
-        src="https://images-na.ssl-images-amazon.com/images/I/81s0B6NYXML._AC_UL600_SR600,400_.jpg"
+        src="./images/amazon-book-think-like-a-detective.jpg"
         alt="Lily hasn’t always had it easy, but that’s never stopped her from working hard for the life she wants."
       />
     </>
