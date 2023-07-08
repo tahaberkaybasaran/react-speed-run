@@ -41,7 +41,12 @@ const Title = () => {
   return <h2>It Ends with Us: A Novel</h2>;
 };
 const Author = () => {
-  return <h3>- Colleen Hoover -</h3>;
+  const inlineHeadingStyle = {
+    color: "#617d98",
+    fontSize: "0.75rem",
+    marginTop: ".5rem",
+  };
+  return <h3 style={inlineHeadingStyle}>- Colleen Hoover -</h3>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
