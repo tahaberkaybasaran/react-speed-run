@@ -3,23 +3,43 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 
-const author1 = "- David Packman -";
-const author2 = "- Colleen Hover -";
-const author3 = "- Barbara KingSolver -";
-const title1 = "Think Like a Detective";
-const title2 = "It Starts With Us";
-const title3 = "Demon Copperhead";
-const image1 = "./images/amazon-book-think-like-a-detective.jpg";
-const image2 = "./images/amazon-book-it-starts-with-us.jpg";
-const image3 = "./images/amazon-book-a-pulitzer-price-winner.jpg";
+const book_one = {
+  atuhor: "David Packman",
+  title: "Think Like a Detective",
+  image: "./images/amazon-book-think-like-a-detective.jpg",
+};
+
+const book_two = {
+  atuhor: "Colleen Hover",
+  title: "It Starts With Us",
+  image: "./images/amazon-book-it-starts-with-us.jpg",
+};
+
+const book_three = {
+  atuhor: "Barbara Kingsolver",
+  title: "Demon Copperhead",
+  image: "./images/amazon-book-a-pulitzer-price-winner.jpg",
+};
 
 const BookList = () => {
   return (
     <>
       <section className="booklist">
-        <Book img={image1} title={title1} author={author1} />
-        <Book img={image2} title={title2} author={author2} />
-        <Book img={image3} title={title3} author={author3} />
+        <Book
+          img={book_one.image}
+          title={book_one.title}
+          author={book_one.atuhor}
+        />
+        <Book
+          img={book_two.image}
+          title={book_two.title}
+          author={book_two.atuhor}
+        />
+        <Book
+          img={book_three.image}
+          title={book_three.title}
+          author={book_three.atuhor}
+        />
       </section>
     </>
   );
