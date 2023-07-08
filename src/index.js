@@ -3,50 +3,39 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 
+const author1 = "- David Packman -";
+const author2 = "- Colleen Hover -";
+const author3 = "- Barbara KingSolver -";
+const title1 = "Think Like a Detective";
+const title2 = "It Starts With Us";
+const title3 = "Demon Copperhead";
+const image1 = "./images/amazon-book-think-like-a-detective.jpg";
+const image2 = "./images/amazon-book-it-starts-with-us.jpg";
+const image3 = "./images/amazon-book-a-pulitzer-price-winner.jpg";
+
 const BookList = () => {
   return (
     <>
       <section className="booklist">
-        <Book />
-        <Book />
-        <Book />
+        <Book img={image1} title={title1} author={author1} />
+        <Book img={image2} title={title2} author={author2} />
+        <Book img={image3} title={title3} author={author3} />
       </section>
     </>
   );
 };
 
-const Book = () => {
+const Book = (props) => {
+  console.log(props);
   return (
     <>
       <article className="book">
-        <Image />
-        <Title />
-        <Author />
+        <img src={props.img} alt={props.title} />
+        <h2>{props.title}</h2>
+        <h3>{props.author}</h3>
       </article>
     </>
   );
-};
-
-const Image = () => {
-  return (
-    <>
-      <img
-        src="./images/amazon-book-think-like-a-detective.jpg"
-        alt="Lily hasn’t always had it easy, but that’s never stopped her from working hard for the life she wants."
-      />
-    </>
-  );
-};
-const Title = () => {
-  return <h2>It Ends with Us: A Novel</h2>;
-};
-const Author = () => {
-  const inlineHeadingStyle = {
-    color: "#617d98",
-    fontSize: "0.75rem",
-    marginTop: ".5rem",
-  };
-  return <h3 style={inlineHeadingStyle}>- Colleen Hoover -</h3>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
