@@ -1,39 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Books from "./books";
 
 import "./index.css";
-
-const book_array = [
-  {
-    author: "David Packman",
-    title: "Think Like a Detective",
-    image: "./images/amazon-book-think-like-a-detective.jpg",
-  },
-
-  {
-    author: "Colleen Hover",
-    title: "It Starts With Us",
-    image: "./images/amazon-book-it-starts-with-us.jpg",
-  },
-
-  {
-    author: "Barbara Kingsolver",
-    title: "Demon Copperhead",
-    image: "./images/amazon-book-a-pulitzer-price-winner.jpg",
-  },
-
-  {
-    author: "David Grann",
-    title: "The Wager: A Tale of Shipwreck",
-    image: "./images/amazon-book-a-tale-of-shipwreck.jpg",
-  },
-];
 
 const BookList = () => {
   return (
     <>
       <section className="booklist">
-        {book_array.map((book) => {
+        {Books.map((book) => {
           return (
             <Book img={book.image} title={book.title} author={book.author} />
           );
