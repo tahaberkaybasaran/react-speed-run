@@ -9,22 +9,34 @@ const BookList = () => {
     <>
       <section className="booklist">
         {Books.map((book) => {
-          return (
-            <Book img={book.image} title={book.title} author={book.author} />
-          );
+          const { image, title, author } = book;
+          return <Book book={book} />;
         })}
       </section>
     </>
   );
 };
 
-const Book = ({ img, title, author }) => {
-  console.log({ img, title, author });
+// const Book = (props) => {
+//   const { image, title, author } = props.book;
+//   // const { img, title, author } = props;
+//   return (
+//     <>
+//       <article className="book">
+//         <img src={image} alt={title} />
+//         <h2>{title}</h2>
+//         <h3>{author}</h3>
+//       </article>
+//     </>
+//   );
+// };
+
+const Book = ({ book: { image, title, author } }) => {
   // const { img, title, author } = props;
   return (
     <>
       <article className="book">
-        <img src={img} alt={title} />
+        <img src={image} alt={title} />
         <h2>{title}</h2>
         <h3>{author}</h3>
       </article>
