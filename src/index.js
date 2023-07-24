@@ -3,58 +3,48 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 
-const book_one = {
-  atuhor: "David Packman",
-  title: "Think Like a Detective",
-  image: "./images/amazon-book-think-like-a-detective.jpg",
-};
+const book_array = [
+  {
+    author: "David Packman",
+    title: "Think Like a Detective",
+    image: "./images/amazon-book-think-like-a-detective.jpg",
+  },
 
-const book_two = {
-  atuhor: "Colleen Hover",
-  title: "It Starts With Us",
-  image: "./images/amazon-book-it-starts-with-us.jpg",
-};
+  {
+    author: "Colleen Hover",
+    title: "It Starts With Us",
+    image: "./images/amazon-book-it-starts-with-us.jpg",
+  },
 
-const book_three = {
-  atuhor: "Barbara Kingsolver",
-  title: "Demon Copperhead",
-  image: "./images/amazon-book-a-pulitzer-price-winner.jpg",
-};
+  {
+    author: "Barbara Kingsolver",
+    title: "Demon Copperhead",
+    image: "./images/amazon-book-a-pulitzer-price-winner.jpg",
+  },
+
+  {
+    author: "David Grann",
+    title: "The Wager: A Tale of Shipwreck",
+    image: "./images/amazon-book-a-tale-of-shipwreck.jpg",
+  },
+];
 
 const BookList = () => {
   return (
     <>
       <section className="booklist">
-        <Book
-          img={book_one.image}
-          title={book_one.title}
-          author={book_one.atuhor}
-        >
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto ex
-            voluptas quod minus eum quam, molestias fugit iste maiores
-            necessitatibus!
-          </p>
-          <button>Click Here!!!</button>
-        </Book>
-
-        <Book
-          img={book_two.image}
-          title={book_two.title}
-          author={book_two.atuhor}
-        />
-        <Book
-          img={book_three.image}
-          title={book_three.title}
-          author={book_three.atuhor}
-        />
+        {book_array.map((book) => {
+          return (
+            <Book img={book.image} title={book.title} author={book.author} />
+          );
+        })}
       </section>
     </>
   );
 };
 
-const Book = ({ img, title, author, children }) => {
-  console.log({ img, title, author, children });
+const Book = ({ img, title, author }) => {
+  console.log({ img, title, author });
   // const { img, title, author } = props;
   return (
     <>
@@ -62,7 +52,6 @@ const Book = ({ img, title, author, children }) => {
         <img src={img} alt={title} />
         <h2>{title}</h2>
         <h3>{author}</h3>
-        <h4>{children}</h4>
       </article>
     </>
   );
