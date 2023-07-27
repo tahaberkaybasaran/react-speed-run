@@ -5,30 +5,30 @@ import Books from "./books";
 import "./index.css";
 
 const BookList = () => {
+  const value = "some value";
+  const displayValue = () => {
+    console.log(value);
+  };
   return (
     <>
       <section className="booklist">
         {Books.map((book) => {
           // const { image, title, author } = book;
-          return <Book key={book.id} {...book} />;
+          return <Book key={book.id} {...book} displayValue={displayValue} />;
         })}
       </section>
     </>
   );
 };
 
-const Book = (props) => {
-  const { image, title, author } = props;
-  const displayTitle = () => {
-    console.log(`display the ${title} test`);
-  };
+const Book = ({ image, title, author, displayValue }) => {
   return (
     <>
       <article className="book">
         <img src={image} alt={title} />
         <h2>{title}</h2>
         <button
-          onClick={displayTitle}
+          onClick={displayValue}
           style={{
             margin: "5px",
             fontSize: "17px",
