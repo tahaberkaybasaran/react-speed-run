@@ -30,7 +30,7 @@ const Book = ({ id, image, title, author, getBook }) => {
         <img src={image} alt={title} />
         <h2>{title}</h2>
         <button
-          onClick={getBook(id)}
+          onClick={() => getBook(id)}
           style={{
             margin: "5px",
             fontSize: "17px",
