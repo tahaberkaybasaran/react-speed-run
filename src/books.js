@@ -1,31 +1,34 @@
-const book_array = [
+import img1 from "./images/amazon-book-think-like-a-detective.jpg";
+import img2 from "./images/amazon-book-it-starts-with-us.jpg";
+import img3 from "./images/amazon-book-a-pulitzer-price-winner.jpg";
+import img4 from "./images/amazon-book-a-tale-of-shipwreck.jpg";
+
+export const books = [
   {
     id: 1,
     author: "David Packman",
     title: "Think Like a Detective",
-    image: "./images/amazon-book-think-like-a-detective.jpg",
+    image: img1,
   },
 
   {
     id: 2,
     author: "Colleen Hover",
     title: "It Starts With Us",
-    image: "./images/amazon-book-it-starts-with-us.jpg",
+    image: img2,
   },
 
   {
     id: 3,
     author: "Barbara Kingsolver",
     title: "Demon Copperhead",
-    image: "./images/amazon-book-a-pulitzer-price-winner.jpg",
+    image: img3,
   },
 
   {
     id: 4,
     author: "David Grann",
     title: "The Wager: A Tale of Shipwreck",
-    image: "./images/amazon-book-a-tale-of-shipwreck.jpg",
+    image: img4,
   },
 ];
-
-export default book_array;

@@ -30,6 +30,7 @@ body {
   border-radius: 20px;
   padding: 4rem;
   text-align: center;
+  position: relative;
 }
 
 .book img {
@@ -46,4 +47,23 @@ body {
   color: #617d98;
   font-size: 0.75rem;
   margin-top: 0.5rem;
+}
+
+.bookNumber {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background: #c35600;
+  color: #fff;
+}
+
+.h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+  text-transform: capitalize;
 }
